@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarMenuButton" id="59FF1B073BB54D8BACC0D23D1B80C96A" action="add">
+  <label xml:lang="en">Refresh from Database</label>
+  <on_click_handler keyed_name="Refresh from Database" type="Method">058191470A844487B51B2F5F78A785CF</on_click_handler>
+  <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_tools_menu" type="CommandBarMenu">5A9D1662308A437099AF0B67B737077A</parent_menu>
+  <name>aras_labs.twmm_refresh_from_db</name>
+ </Item>
+</AML>

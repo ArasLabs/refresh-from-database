@@ -1,0 +1,18 @@
+﻿<AML>
+ <Item type="CommandBarSectionItem" id="FC938C36D64840CE8926B4BF6599BAD3" action="add">
+  <action>Add</action>
+  <related_id keyed_name="aras_labs.twt_refresh_from_db" type="CommandBarItem">
+   <Item type="CommandBarButton" id="A0490E44FEED435AA64022F4EBE1A19A" action="add">
+    <image>../Images/RefreshFromDatabase.svg</image>
+    <label xml:lang="en">Refresh from DB</label>
+    <on_click_handler keyed_name="Refresh from Database" type="Method">058191470A844487B51B2F5F78A785CF</on_click_handler>
+    <on_init_handler keyed_name="cui_reinit_twt_refresh" type="Method">4E7546B00C804E5CB0AFBA81AE276B6A</on_init_handler>
+    <tooltip_template xml:lang="en">Refresh from DB</tooltip_template>
+    <name>aras_labs.twt_refresh_from_db</name>
+   </Item>
+  </related_id>
+  <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+  <sort_order>161</sort_order>
+  <source_id keyed_name="com.aras.innovator.cui_default.twt_normal" type="CommandBarSection">8D2C120D9A65414690A0E8D001A8FBC9</source_id>
+ </Item>
+</AML>

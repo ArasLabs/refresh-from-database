@@ -1,0 +1,16 @@
+﻿<AML>
+ <Item type="CommandBarSectionItem" id="FA9EE10174E146FBBBE9EFB23782C2E5" action="add">
+  <action>Add</action>
+  <related_id keyed_name="aras_labs.twmm_refresh_from_db" type="CommandBarItem">
+   <Item type="CommandBarMenuButton" id="59FF1B073BB54D8BACC0D23D1B80C96A" action="add">
+    <label xml:lang="en">Refresh from Database</label>
+    <on_click_handler keyed_name="Refresh from Database" type="Method">058191470A844487B51B2F5F78A785CF</on_click_handler>
+    <parent_menu keyed_name="com.aras.innovator.cui_default.twmm_tools_menu" type="CommandBarMenu">5A9D1662308A437099AF0B67B737077A</parent_menu>
+    <name>aras_labs.twmm_refresh_from_db</name>
+   </Item>
+  </related_id>
+  <role keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</role>
+  <sort_order>1921</sort_order>
+  <source_id keyed_name="com.aras.innovator.cui_default.tearoff_window_main_menu" type="CommandBarSection">BDB17A0A3DF74336BBE40C81E16467F0</source_id>
+ </Item>
+</AML>

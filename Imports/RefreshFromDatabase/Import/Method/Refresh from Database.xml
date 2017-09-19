@@ -1,0 +1,63 @@
+﻿<AML>
+ <Item type="Method" id="058191470A844487B51B2F5F78A785CF" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var inn = this.getInnovator();
+
+var doc = parent.frames[1].document;
+
+if (doc)
+{
+    // Make sure that any changes will not be overwritten unintentionally
+    if (top.aras.isDirtyEx(doc.thisItem.node))
+    {
+        var options = {dialogWidth: 400, dialogHeight: 200, center: true},
+            params = {
+                aras: top.aras,
+                message: "Refreshing from the database will overwrite your changes. Do you wish to continue?",
+                buttons: {
+                    btnYes: top.aras.getResource('', 'common.yes'),
+                    btnCancel: top.aras.getResource('', 'common.cancel')
+                },
+                defaultButton: 'btnCancel'
+            },
+            returnedValue;
+        
+    	var wnd = top.aras.getMainWindow();
+    	wnd = wnd === top ? wnd.main : top;
+        if (wnd.showModalDialog) {
+            returnedValue = top.aras.modalDialogHelper.show('DefaultModal', wnd, params, options, 'groupChgsDialog.html');
+        } else {
+            returnedValue = 'btnCancel';
+            if (window.confirm("Refreshing from the database will overwrite your changes. Do you wish to continue?")) {
+                returnedValue = 'btnYes;'
+            }
+        }
+        
+        if (returnedValue == 'btnCancel')
+        {
+            return null;
+        }
+    }
+    
+    // Get the most recent generation of the currently opened item
+    var itemID = doc.itemID;
+    var itemType = doc.thisItem.getType();
+    
+    var oldPart = inn.newItem(itemType, "get");
+    oldPart.setID(itemID);
+    oldPart = oldPart.apply();
+    
+    var newPart = inn.newItem(itemType, "get");
+    newPart.setProperty("config_id", oldPart.getProperty("config_id"));
+    newPart.setProperty("is_current", "1");
+    newPart = newPart.apply();
+    
+    // Show the newest generation of this item in the same tearoff window or tab
+    doc.thisItem = newPart;
+    top.aras.uiReShowItemEx(oldPart.getID(), doc.thisItem.node);
+}
+]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>Refresh from Database</name>
+ </Item>
+</AML>
