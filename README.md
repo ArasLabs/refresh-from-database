@@ -8,7 +8,7 @@ This package adds a method and a button to the tearoff window which refreshes fr
 Aras 11.0 SP10
 
 #### Versions Tested:
-Aras 11.0 SP12 (latest open release),Aras 11.0 SP10, Aras 11.0 SP9 (open release), Aras 11.0 SP7 
+Aras 11.0 SP15 (latest open release),Aras 11.0 SP12, Aras 11.0 SP10, Aras 11.0 SP9 (open release), Aras 11.0 SP7 
 
 #### Browsers Tested:
 Internet Explorer 11, Firefox 52, Chrome 69
