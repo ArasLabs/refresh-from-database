@@ -2,18 +2,24 @@
 
 This package adds a method and a button to the tearoff window which refreshes from the database. The default refresh button only refreshes from the dom.
 
-## Project Details
+## History
 
-#### Built Using:
-Aras 11.0 SP10
+Release | Notes
+--------|--------
+[v1.4](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.4) | Bug fixes
+[v1.3](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.3) | Verified for 11.0 SP15
+[v1.2](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.2) | Update to 11.0 SP12
+[v1.1](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.1) | Update to 11.0 SP11
+[v1.0](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.0) | Initial Release
 
-#### Versions Tested:
-Aras 11.0 SP15 (latest open release),Aras 11.0 SP12, Aras 11.0 SP10, Aras 11.0 SP9 (open release), Aras 11.0 SP7 
-
-#### Browsers Tested:
-Internet Explorer 11, Firefox 52, Chrome 69
-
-> Though built and tested using Aras 11.0 SP10, this project should function in older releases of Aras 11.0 after SP7 when CUI functionality was introduced.
+#### Supported Aras Versions
+Project | Aras
+--------|--------
+[v1.4](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.4) | 11.0 SP15, 11.0 SP12
+[v1.3](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.3) | 11.0 SP15, 11.0 SP12
+[v1.2](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.2) | 11.0 SP12
+[v1.1](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.1) | 11.0 SP11
+[v1.0](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.0) | 11.0 SP10
 
 ## Installation
 
@@ -49,8 +55,6 @@ These code tree changes only contain a custom icon for the toolbar. If you wish 
 7. Select Type = **Merge** and Mode = **Thorough Mode**.
 8. Click **Import** in the top left corner.
 9. Close the Aras Package Import tool.
-
-#### 
 
 You are now ready to login to Aras and try out the Refresh From Database button.
 

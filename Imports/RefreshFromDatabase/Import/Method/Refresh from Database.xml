@@ -23,7 +23,25 @@ if (doc)
 
         // Show the newest generation of this item in the same tearoff window or tab
         doc.thisItem = newPart;
+        parent.item = newPart.node;
         aras.uiReShowItemEx(oldPart.getID(), doc.thisItem.node);
+        
+        /* This code was added to fix an issue where relationships that weren't
+         * in the currently displayed tab weren't refreshing with the item.
+         * 
+         * The reason for this issue was that the relationship grid is loaded from
+         * a query string rather than from the item of the parent window. When the
+         * item was refreshing, the ID of the parent item in the query string wasn't
+         * refreshing along with it, so you were still seeing relationships off of
+         * the old generation of the item.
+         *
+         * To work around this issue, we build our own query string and manually
+         * reload the relationships grid using it. Reloading the relationship grid
+         * may cause any unsaved relationships to be wiped, but we already perform
+         * a check for any unsaved data before saving.
+         */
+        var queryString = getQueryStringForRelGrid();
+        parent.relationships.reload(queryString);
     }
 
     // Make sure that any changes will not be overwritten unintentionally
@@ -60,6 +78,20 @@ if (doc)
     } else {
         generation();
     }
+}
+
+function getQueryStringForRelGrid()
+{
+    var queryString = {};
+    queryString.db = aras.getDatabase();
+    queryString.ITName = parent.itemTypeName;
+    queryString.relTypeID = parent.relationships.relTabbar.GetSelectedTab();
+    queryString.itemID = parent.itemID;
+    queryString.editMode = (parent.isEditMode ? 1 : 0);
+    queryString.tabbar = "1";
+    queryString.toolbar = "1";
+    queryString.where = "tabview";
+    return queryString;
 }
 ]]></method_code>
   <method_type>JavaScript</method_type>
