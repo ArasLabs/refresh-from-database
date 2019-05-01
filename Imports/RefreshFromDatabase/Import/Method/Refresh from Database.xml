@@ -24,8 +24,7 @@ if (doc)
         // Show the newest generation of this item in the same tearoff window or tab
         doc.thisItem = newPart;
         parent.item = newPart.node;
-        aras.uiReShowItemEx(oldPart.getID(), doc.thisItem.node);
-        
+
         /* This code was added to fix an issue where relationships that weren't
          * in the currently displayed tab weren't refreshing with the item.
          * 
@@ -42,6 +41,8 @@ if (doc)
          */
         var queryString = getQueryStringForRelGrid();
         parent.relationships.reload(queryString);
+
+        aras.uiReShowItemEx(oldPart.getID(), doc.thisItem.node);
     }
 
     // Make sure that any changes will not be overwritten unintentionally

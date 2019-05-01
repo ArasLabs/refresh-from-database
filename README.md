@@ -6,6 +6,7 @@ This package adds a method and a button to the tearoff window which refreshes fr
 
 Release | Notes
 --------|--------
+[v1.5](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.5) | Bug fixes
 [v1.4](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.4) | Bug fixes
 [v1.3](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.3) | Verified for 11.0 SP15
 [v1.2](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.2) | Update to 11.0 SP12
@@ -15,6 +16,7 @@ Release | Notes
 #### Supported Aras Versions
 Project | Aras
 --------|--------
+[v1.5](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.5) | 11.0 SP15, 11.0 SP12
 [v1.4](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.4) | 11.0 SP15, 11.0 SP12
 [v1.3](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.3) | 11.0 SP15, 11.0 SP12
 [v1.2](https://github.com/ArasLabs/refresh-from-database/releases/tag/v1.2) | 11.0 SP12
