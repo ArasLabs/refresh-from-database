@@ -2,6 +2,8 @@
 
 This package adds a method and a button to the tearoff window which refreshes from the database. The default refresh button only refreshes from the dom.
 
+> As of Aras Innovator 12.0 SP3, the functionality in this community project has been introduced as part of the standard refresh action. If you are using 12.0 SP3+, you do not need to install this community project.
+
 ## History
 
 Release | Notes
